@@ -1,0 +1,642 @@
+/* NAVBAR en Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .navbar a {
+        font-size: 16px;
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .navbar a:last-child {
+        border-bottom: none;
+    }
+
+    /* Centrando la imagen en mobile */
+    .imagentexto img.nimagen {
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        max-width: 300px;
+        border-radius: 10px;
+    }
+
+    /* Sección Nosotros centrada */
+    .about .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .about-text {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Mejorando la sección Productos */
+    .box-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    .box {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    /* Footer centrado en móvil */
+    .footer-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-social a {
+        font-size: 18px;
+    }
+
+    /* Botón de WhatsApp ajustado para mobile */
+    .whatsapp-button {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+/* Ajustamos el margen superior del body para evitar que el contenido se oculte detrás del header */
+body {
+    text-align: center;
+    font-family: sans-serif;
+    padding-top: 100px; /* Ajusta este valor si es necesario */
+    background-color: #ffffff; /* Fondo para mejor contraste */
+    margin-bottom: 0%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra de navegación */
+.head {
+    border-bottom: 3px solid #E31E25; /* Línea roja debajo de la navbar */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 55px; /* Altura ajustada */
+    background: #ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 0 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #E31E25; /* Línea roja debajo de la navbar */
+    
+}
+/* Logo */
+.logo {
+    margin-left: 10px;
+   
+}
+
+.logo img {
+    height: 50px; /* Tamaño correcto */
+    width: auto;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.navbar a {
+    display: block;
+    padding: 10px 15px; /* Reducimos el padding */
+    color: rgb(17, 17, 17);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.navbar a:hover {
+    background: #E31E25;
+    color: white;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+/* Sección principal */
+.header {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(img/Impresora.jpg) no-repeat center;
+    background-size: cover;
+    text-align: center;
+    border-bottom: 3px solid #E31E25; /* Línea roja debajo de la navbar */
+    margin-bottom: auto;
+}
+
+  
+/* Contenedor del carrusel */
+.slideshow {
+  position: relative;
+  width: 100vw;
+  height: 85vh;
+  display: flex;
+  margin-top: 0%;
+}
+
+/* Configuración de cada slide */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fade 12s infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Asigna imágenes a cada slide */
+.slide:nth-child(1) {
+  background-image: url('img/Laminado.jpg');
+  animation-delay: 0s;
+}
+.slide:nth-child(2) {
+  background-image: url('img/Impresora.jpg');
+  animation-delay: 4s;
+}
+.slide:nth-child(3) {
+  background-image: url('img/Impresion.jpg');
+  animation-delay: 8s;
+}
+
+/* Animación de transición */
+@keyframes fade {
+  0% { opacity: 0; }
+  8.33% { opacity: 1; }
+  33.33% { opacity: 1; }
+  41.66% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Contenedor de texto encima de las imágenes */
+.overlay {
+  text-align: center;
+  /*background: rgba(5, 5, 5, 0.5); /* Fondo semitransparente para mejorar la visibilidad */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Estilos del título */
+.overlay h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #fcf9f9;
+}
+
+/* Estilos del texto */
+.overlay p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+/* Estilos generales de la sección */
+.about {
+    padding: 5rem 2rem;
+    background-color: #f5f5f5;
+}
+
+/* Estilos generales de la sección */
+.about {
+    padding: 5rem 2rem;
+    background-color: #f5f5f5;
+}
+
+/* Contenedor que organiza la imagen y el texto */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Espacio entre la imagen y el texto */
+}
+
+/* Texto a la izquierda */
+.about-text {
+    flex: 2;
+    text-align: left;
+    padding: 0 80px;
+    margin-bottom: 0%;
+}
+
+/* Imagen a la derecha */
+.imagentexto {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nimagen {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 120px;
+}
+
+/* Título estilizado */
+.title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Párrafo estilizado */
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Adaptabilidad para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagentexto {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .about-text {
+        padding: 0;
+    }
+}
+
+/* Sección productos */
+.sau {
+    background: #ffffff; /* Fondo blanco */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Título principal de la sección */
+.sau h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #E31E25; /* Letras rojas */
+    margin-bottom: 20px;
+}
+
+/* Texto en la sección "Nosotros" */
+.sau p {
+    font-size: 30px;
+    color: #f3eeee; /* Texto en negro */
+    padding: 0 50px;
+    line-height: 1.5;
+}
+
+/* Contenedor de cajas */
+.box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: px;
+}
+
+/* Caja individual */
+.box {
+    height: 11rem;
+    width: 17rem;
+    background: #ffffff; /* Fondo blanco */
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    margin: 2rem;
+    padding: 20px;
+    transition: transform 0.3s;
+    border: 2px solid #E31E25; /* Borde rojo */
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+/* Íconos en las cajas */
+.box i {
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    color: #ffffff;
+    background: #E31E25; /* Íconos con fondo rojo */
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+/* Texto en las cajas */
+.box h3 {
+    font-size: 20px;
+    color: #E31E25; /* Letras rojas */
+}
+
+.box p {
+    font-size: 16px;
+    color: #000000; /* Texto en negro */
+}
+
+/* Sección "Nosotros" */
+.about {
+    background: #ffffff; /* Fondo blanco */
+    padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px; /* Espacio entre el texto y la imagen */
+    flex-wrap: nowrap; /* Evita que los elementos se apilen en columnas */
+}
+
+/* Contenedor de texto */
+.about-text {
+    flex: 1; /* Permite que ocupe el espacio disponible */
+    max-width: 80%; /* Ajuste del ancho máximo */
+    text-align: left;
+}
+
+
+
+/* Título */
+.about-text h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #E31E25; /* Rojo */
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Texto */
+.about-text p {
+    font-size: 15px;
+    color: #000000; /* Negro */
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Botón */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 40px;
+    border: 2px solid #E31E25;
+    color: #0a0a0a;
+    text-decoration: none;
+    background: #E31E25;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: none;
+    color: #E31E25;
+}
+
+
+
+.about-image img {
+    max-width: 140%; /* Asegurarse de que la imagen no exceda el contenedor */
+    border-radius: 10px;
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+/* Fondo rojo detrás de la imagen */
+.about-image::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 30px;
+    width: 90%;
+    height: 103%;
+    background: #E31E25; /* Rojo */
+    border-radius: 10px;
+    z-index: 1;
+}
+
+
+/* Sección de estadísticas */
+.stats-section {
+    background: url('tu-imagen-de-fondo.jpg') center/cover no-repeat;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Contenedor de las estadísticas */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* Reducido el espacio entre las cajas */
+    align-items: center;
+    color: #000000;
+}
+
+/* Cada estadística */
+.stat {
+    text-align: center;
+    background: #fcfcfc; /* Fondo blanco */
+    padding: 25px; /* Reducido para hacer las cajas más pequeñas */
+    border-radius: 15px;
+    min-width: 180px; /* Reducido para hacerlas más pequeñas */
+    border: 3px solid #393083; /* Borde azul */
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.stat:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Iconos */
+.icon {
+    font-size: 70px; /* Aumentado el tamaño del icono */
+    color: #393083; /* Azul */
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Números en rojo */
+.counter {
+    font-size: 40px; /* Mantiene un buen tamaño sin ser demasiado grande */
+    font-weight: bold;
+    color: #E31E25; /* Todos los números en rojo */
+}
+
+/* Texto descriptivo */
+.stat p {
+    font-size: 18px;
+    margin-top: 5px;
+    color: #000000; /* Texto en negro */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 30px; /* Espaciado ajustado en móviles */
+    }
+
+    .stat {
+        min-width: 90%; /* Ajustado para pantallas pequeñas */
+    }
+}
+.texto01{
+    color: #000000;
+}
+
+/* Estilos generales del footer */
+.footer {
+    background-color: #ffffff; 
+    color: #fff;
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor del footer */
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Sección de información de contacto */
+.footer-info h3,
+.footer-social h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #393083; /* Color dorado para los títulos */
+}
+
+.footer-info p {
+    font-size: 16px;
+    margin: 8px 0;
+    color: #000000; /* Color más claro para mejorar la visibilidad */
+}
+
+.footer-info i {
+    margin-right: 8px;
+    color: #393083;
+}
+
+/* Sección de redes sociales */
+.footer-social {
+    text-align: center;
+}
+
+.footer-social .social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: #000000;
+    transition: color 0.3s;
+}
+
+.footer-social .social-icon:hover {
+    color: #393083;
+}
+
+/* Parte inferior del footer */
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px; /* Reduce el espacio superior */
+    padding-top: 5px; /* Reduce el padding superior */
+    border-top: 1px solid #030303;
+    font-size: 4px; /* Reduce el tamaño del texto */
+    color: #393083; /* Color más claro */
+}
+.derechos {
+    color: #393083;
+}
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-size: 30px;
+}
+.whatsapp-button:hover {
+    background-color: #1ebe5d;
+}
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .imagentexto img {
+        max-width: 80%;
+    }
+
+    .box-container {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .box {
+        width: 100%;
+    }
+}
+
+
+

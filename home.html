@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An&Plast - Innovación y calidad en empaques plásticos">
+    <meta name="keywords" content="plástico, empaques, innovación, calidad">
+    <meta name="author" content="An&Plast">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/primeflex@latest/primeflex.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>An&Plast</title>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="head flex justify-content-between align-items-center p-3">
+        <div class="logo">
+            <a href="#"><img src="img/LOGO.jpg" alt="Logo de An&Plast" class="w-full" style="max-height: 50px;"></a>
+        </div>
+        <nav class="navbar flex gap-3">
+            <a href="home.html">Inicio</a>
+            <a href="Nosotros.html">Nosotros</a>
+            <a href="formulario.html">Contacto</a>
+            <a href="productos.html">Productos</a>
+        </nav>
+    </header>
+    <div class="slideshow">
+        <div class="slide">
+          <div class="overlay">
+            <h1>Comprometidos con la excelencia</h1>
+            <p></p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="overlay">
+            <h1>Innovación y calidad en empaques plásticos.</h1>
+            <p></p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="overlay">
+            <h1>Comprometidos con la excelencia</h1>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <!-- SECCIÓN NOSOTROS -->
+<section class="about">
+    <div class="container">
+        <div class="imagentexto">
+            <img class="nimagen" src="img/LOGO.jpg" alt="imagen empresa">
+        </div>
+        <div class="about-text">
+            <h2 class="title">¿Quiénes somos?</h2>
+            <p>
+                Ubicados en Bogotá D.C., somos una empresa 100% colombiana con 20 años de experiencia en la
+                fabricación, comercialización y venta de empaques plásticos de alta y baja densidad. Nos
+                especializamos en productos pre cortados e impresos, diseñados para satisfacer las diversas
+                necesidades de la industria.<br><br>
+                Desde nuestra fundación el 24 de junio de 2005, nos hemos consolidado como un referente en el
+                mercado gracias a nuestro compromiso con la innovación, la calidad y la atención personalizada a
+                nuestros clientes.
+                <br><br>
+            </p>
+        </div>
+    </div>
+</section>
+
+    <br><br><br><br><br><br><br>
+
+
+    <!-- SECCIÓN CONTADORES -->
+    <section class="stats-section text-center py-5">
+        <div class="container flex justify-content-around">
+            <div class="stat">
+                <i class="fas fa-smile"></i>
+                <h2 class="counter" data-target="88"></h2>
+                <div class="progress">
+                    <div class="progress-bar glow" data-target="9878"></div>
+                </div>
+                <p>Clientes Felices</p>
+            </div>
+            <div class="stat">
+                <i class="fas fa-shopping-bag"></i>
+                <h2 class="counter" data-target="654">654+</h2>
+                <div class="progress">
+                    <div class="progress-bar glow" data-target="654"></div>
+                </div>
+                <p> Referencias de Empaques</p>
+            </div>
+            <div class="stat">
+                <i class="fas fa-box"></i>
+                <h2 class="counter" data-target="14752">14752+</h2>
+                <div class="progress">
+                    <div class="progress-bar glow" data-target="14752"></div>
+                </div>
+                <p>Pedidos Entregados</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enlace a Animate.css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+    <style>
+        .progress {
+            width: 100%;
+            height: 8px;
+            background: #ccc;
+            border-radius: 5px;
+            margin: 10px 0;
+            overflow: hidden;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            /* Sombra ligera */
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: #393083;
+            /* Azul Corporativo */
+            transition: width 2.5s ease-in-out;
+        }
+
+        .glow {
+            box-shadow: 0 0 10px #393083, 0 0 20px #393083;
+            /* Efecto Glow 🔥 */
+            animation: glow-animation 2s infinite alternate;
+        }
+
+        @keyframes glow-animation {
+            from {
+                box-shadow: 0 0 10px #393083, 0 0 20px #393083;
+            }
+
+            to {
+                box-shadow: 0 0 20px #393083, 0 0 30px #393083;
+            }
+        }
+    </style>
+
+    <script>
+        function isVisible(element) {
+            const rect = element.getBoundingClientRect();
+            return rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight);
+        }
+
+        function startCounter(counter) {
+            const target = +counter.getAttribute('data-target');
+            let count = 0;
+            const increment = target / 100;
+
+            const updateCounter = setInterval(() => {
+                count += increment;
+                counter.innerText = Math.floor(count) + '+';
+
+                if (count >= target) {
+                    counter.innerText = target + '+';
+                    clearInterval(updateCounter);
+                }
+            }, 20);
+        }
+
+        function startProgressBar(progressBar) {
+            const target = +progressBar.getAttribute('data-target');
+            const percentage = Math.min((target / 15000) * 100, 100);
+
+            setTimeout(() => {
+                progressBar.style.width = percentage + '%';
+            }, 200);
+        }
+
+        window.addEventListener('scroll', () => {
+            const stats = document.querySelectorAll('.stat');
+
+            stats.forEach((stat, index) => {
+                if (isVisible(stat) && !stat.classList.contains('animated-once')) {
+                    stat.classList.add('animate__animated', 'animate__backInDown', 'animated-once');
+                    setTimeout(() => {
+                        const counter = stat.querySelector('.counter');
+                        const progressBar = stat.querySelector('.progress-bar');
+                        startCounter(counter);
+                        startProgressBar(progressBar);
+                    }, index * 300);
+                }
+            });
+        });
+    </script>
+
+
+
+    <!-- SECCIÓN PRODUCTOS -->
+    <section class="content sau text-center py-5 animate">
+        <h2 class="title animate__animated">Nuestros segmentos del mercado</h2>
+        <div p class="texo01">
+            Nuestros empaques flexibles integran sostenibilidad e innovación, mejorando la experiencia de consumo!
+     </p></div>
+        <div class="box-container flex justify-content-around">
+            <div class="box">
+                <i class="fab fa-apple"></i>
+                <h3>Alimentos</h3>
+                <p>Frescura e inocuidad.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-cat"></i>
+                <h3>Linea para mascotas</h3>
+                <p>Amor y cuidado de los animales.</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-cogs"></i>
+                <h3>Construcción y otros</h3>
+                <p>Seguridad y confianza.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enlace Animate.css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+    <style>
+        .box-container {
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+            box-shadow: 0 0 10px #393083;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            opacity: 0;
+            /* Ocultar por defecto */
+            transform: translateY(50px);
+            /* Desplazamiento inicial */
+        }
+
+        .box.show {
+            opacity: 1;
+            /* Mostrar con animación */
+            transform: translateY(0);
+            transition: all 1s ease;
+        }
+
+        .box:hover {
+            transform: scale(1.1);
+        }
+    </style>
+
+    <script>
+        const boxes = document.querySelectorAll('.box');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    entry.target.classList.add('animate__animated', 'animate__backInUp');
+                }
+            });
+        }, {
+            threshold: 0.3
+        });
+
+        boxes.forEach(box => {
+            observer.observe(box);
+        });
+    </script>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-info">
+            <h3>Contacto</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Transversal 95 bis a # 25d 41</p>
+            <p><i class="fas fa-envelope"></i> anplastcontabil@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +57 312 513 2757</p>
+            <p><i class="fas fa-phone"></i> +57 312 513 2757</p>
+        </div>
+
+        <div class="footer-social">
+            <h3>Síguenos</h3>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p class="derechos">&copy; 2025 AnPlast. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<!-- Font Awesome para los iconos -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+<!-- Librería Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+<!-- Botón de WhatsApp -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<a href="https://wa.me/3180275326" target="_blank" class="whatsapp-button">
+    <i class="fab fa-whatsapp"></i>
+</a>
+</body>
+</html>

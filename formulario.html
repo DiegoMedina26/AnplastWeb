@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An&Plast - Innovación y calidad en empaques plásticos">
+    <meta name="keywords" content="plástico, empaques, innovación, calidad">
+    <meta name="author" content="An&Plast">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/primeflex@latest/primeflex.css">
+    <link rel="stylesheet" href="formulario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <title>An&Plast</title>
+</head>
+
+<body>
+    <!-- ENCABEZADO -->
+    <header class="head flex justify-content-between align-items-center p-3">
+        <div class="logo">
+            <a href="#"><img src="img/LOGO.jpg" alt="Logo de An&Plast" class="w-full" style="max-height: 50px;"></a>
+        </div>
+        <nav class="navbar flex gap-3">
+            <a href="home.html">Inicio</a>
+            <a href="Nosotros.html">Nosotros</a>
+            <a href="formulario.html" class="active">Contacto</a>
+            <a href="productos.html">Productos</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Sección del formulario -->
+        <div class="formulario">
+            <h2>Contacto</h2>
+            <form action="procesar_formulario.php" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+                
+                <label for="celular">Celular:</label>
+                <input type="tel" id="celular" name="celular" placeholder="Ingresa tu número de celular" required>
+                
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo" required>
+                
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" rows="5" placeholder="Escribe tu mensaje o consulta" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+            
+        </div>
+
+        <!-- Sección del mapa -->
+        <div class="mapa">
+            <h2>Ubicación</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.520061747548!2d-74.1255363260344!3d4.679281341844979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b62bd023a59%3A0x5282bff295c81ba7!2sTv.%2095%20Bis%20A%20%2325d-41%2C%20Bogot%C3%A1!5e0!3m2!1ses!2sco!4v1741714514671!5m2!1ses!2sco"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Transversal 95 bis a # 25d 41</p>
+                <p><i class="fas fa-envelope"></i> anplastcontabil@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +57 312 513 2757</p>
+            </div>
+
+            <div class="footer-social">
+                <h3>Síguenos</h3>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="derechos">&copy; 2025 AnPlast. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Font Awesome para los iconos -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Botón de WhatsApp -->
+    <a href="https://wa.me/3180275326" target="_blank" class="whatsapp-button">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+
+</html>

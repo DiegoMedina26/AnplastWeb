@@ -1,0 +1,194 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+/* Ajustamos el margen superior del body */
+body {
+    text-align: center;
+    font-family: sans-serif;
+    padding-top: 100px;
+    background-color: #ffffff;
+}
+
+/* Barra de navegación */
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    background: #ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 0 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #E31E25;
+}
+
+/* Logo */
+.logo {
+    margin-left: 10px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    margin-right: 10px;
+}
+
+.navbar a {
+    display: block;
+    padding: 10px 15px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.navbar a:hover {
+    background: #E31E25;
+    color: white;
+}
+
+/* Sección de productos */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ahora los productos aparecerán en filas de 3 */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.producto {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.producto:hover {
+    transform: scale(1.05);
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.producto h2 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.producto p {
+    font-size: 14px;
+    color: #666;
+}
+/* Estilos generales del footer */
+.footer {
+    background-color: #ffffff; 
+    color: #fff;
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor del footer */
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Sección de información de contacto */
+.footer-info h3,
+.footer-social h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #393083; /* Color dorado para los títulos */
+}
+
+.footer-info p {
+    font-size: 16px;
+    margin: 8px 0;
+    color: #000000; /* Color más claro para mejorar la visibilidad */
+}
+
+.footer-info i {
+    margin-right: 8px;
+    color: #393083;
+}
+
+/* Sección de redes sociales */
+.footer-social {
+    text-align: center;
+}
+
+.footer-social .social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: #000000;
+    transition: color 0.3s;
+}
+
+.footer-social .social-icon:hover {
+    color: #393083;
+}
+
+/* Parte inferior del footer */
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px; /* Reduce el espacio superior */
+    padding-top: 5px; /* Reduce el padding superior */
+    border-top: 1px solid #030303;
+    font-size: 4px; /* Reduce el tamaño del texto */
+    color: #393083; /* Color más claro */
+}
+.derechos {
+    color: #393083;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-size: 30px;
+}
+.whatsapp-button:hover {
+    background-color: #1ebe5d;
+}
