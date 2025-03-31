@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset general */
 * {
     margin: 0;
     padding: 0;
@@ -12,11 +12,9 @@
 body {
     text-align: center;
     font-family: sans-serif;
-    padding-top: 100px; /* Ajusta este valor si es necesario */
-    background-color: #ffffff; /* Fondo para mejor contraste */
-    margin-bottom: 0%;
+    padding-top: 100px;
+    background-color: #ffffff;
     margin: 0;
-    padding: 0;
 }
 
 /* Barra de navegación */
@@ -32,7 +30,7 @@ body {
     left: 0;
     z-index: 100;
     padding: 0 20px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
     border-bottom: 3px solid #E31E25;
 }
 
@@ -49,6 +47,7 @@ body {
 /* Navbar */
 .navbar {
     display: flex;
+    align-items: center;
     margin-right: 10px;
 }
 
@@ -59,34 +58,40 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
-    transition: background 0.3s, color 0.3s;
 }
 
 .navbar a:hover {
     background: #E31E25;
     color: white;
+    border-radius: 16px;
+    transition: background 0.3s, color 0.3s;
 }
+
+/* Imagen principal */
 .mainpic {
     position: relative;
     width: 100vw;
     height: 85vh;
     display: flex;
-    margin-top: 0%;
+    margin-top: 0;
 }
 
 /* Estilos generales de la sección */
-.about {
+.about, .mission-vision, .bpm-process {
     padding: 5rem 2rem;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     margin-top: -30px;
 }
 
 /* Contenedor que organiza la imagen y el texto */
 .container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    gap: 20px; /* Espacio entre la imagen y el texto */
+    text-align: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 /* Imagen a la izquierda */
@@ -115,13 +120,15 @@ body {
     font-size: 2rem;
     color: #333;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 /* Párrafo estilizado */
-.about-text p {
+.about-text p, .mission-vision p, .bpm-process p {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #555;
+    text-align: center;
 }
 
 /* Adaptabilidad para pantallas más pequeñas */
@@ -140,14 +147,15 @@ body {
         padding: 0;
     }
 }
+
+/* Footer */
 .footer {
-    background-color: #f1efef; 
+    background-color: #f1efef;
     color: #fff;
     padding: 30px 0;
     font-family: Arial, sans-serif;
 }
 
-/* Contenedor del footer */
 .footer-container {
     display: flex;
     justify-content: space-around;
@@ -157,18 +165,17 @@ body {
     padding: 20px;
 }
 
-/* Sección de información de contacto */
 .footer-info h3,
 .footer-social h3 {
     font-size: 20px;
     margin-bottom: 15px;
-    color: #393083; /* Color dorado para los títulos */
+    color: #393083;
 }
 
 .footer-info p {
     font-size: 16px;
     margin: 8px 0;
-    color: #000000; /* Color más claro para mejorar la visibilidad */
+    color: #000000;
 }
 
 .footer-info i {
@@ -176,7 +183,7 @@ body {
     color: #393083;
 }
 
-/* Sección de redes sociales */
+/* Redes sociales */
 .footer-social {
     text-align: center;
 }
@@ -196,16 +203,18 @@ body {
 /* Parte inferior del footer */
 .footer-bottom {
     text-align: center;
-    margin-top: 10px; /* Reduce el espacio superior */
-    padding-top: 5px; /* Reduce el padding superior */
+    margin-top: 10px;
+    padding-top: 5px;
     border-top: 1px solid #beb2b2;
-    font-size: 4px; /* Reduce el tamaño del texto */
-    color: #393083; /* Color más claro */
+    font-size: 12px;
+    color: #393083;
 }
+
 .derechos {
     color: #393083;
 }
 
+/* Botón de WhatsApp */
 .whatsapp-button {
     position: fixed;
     bottom: 20px;
@@ -221,7 +230,9 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     text-decoration: none;
     font-size: 30px;
+    transition: background 0.3s ease-in-out;
 }
+
 .whatsapp-button:hover {
     background-color: #1ebe5d;
 }
