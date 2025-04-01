@@ -49,22 +49,28 @@ body {
 
 /* Navbar */
 .navbar {
-    display: flex;
-    margin-right: 10px;
+  display: flex;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  margin-top: 15px;
 }
 
 .navbar a {
-    display: block;
-    padding: 10px 15px; /* Reducimos el padding */
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 14px;
+  display: block;
+  padding: 10px 15px; /* Reducimos el padding */
+  color: rgb(17, 17, 17);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 .navbar a:hover {
-    background: #E31E25;
-    color: white;
+  background: #E31E25;
+  color: white;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
 }
 
 /* Estilos generales del footer */

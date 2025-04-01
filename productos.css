@@ -47,27 +47,33 @@ body {
 .navbar {
     display: flex;
     margin-right: 10px;
+    margin-bottom: 20px;
+    margin-top: 15px;
 }
 
 .navbar a {
     display: block;
-    padding: 10px 15px;
-    color: rgb(0, 0, 0);
+    padding: 10px 15px; /* Reducimos el padding */
+    color: rgb(17, 17, 17);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
-    transition: background 0.3s, color 0.3s;
 }
 
 .navbar a:hover {
     background: #E31E25;
     color: white;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
 }
 
 /* Sección de productos */
 .productos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Ahora los productos aparecerán en filas de 3 */
+    grid-template-columns: repeat(3, 1fr);
+    /* Ahora los productos aparecerán en filas de 3 */
     gap: 20px;
     padding: 20px;
     max-width: 1200px;
@@ -106,9 +112,10 @@ body {
     font-size: 14px;
     color: #666;
 }
+
 /* Estilos generales del footer */
 .footer {
-    background-color: #ffffff; 
+    background-color: #ffffff;
     color: #fff;
     padding: 30px 0;
     font-family: Arial, sans-serif;
@@ -129,13 +136,15 @@ body {
 .footer-social h3 {
     font-size: 20px;
     margin-bottom: 15px;
-    color: #393083; /* Color dorado para los títulos */
+    color: #393083;
+    /* Color dorado para los títulos */
 }
 
 .footer-info p {
     font-size: 16px;
     margin: 8px 0;
-    color: #000000; /* Color más claro para mejorar la visibilidad */
+    color: #000000;
+    /* Color más claro para mejorar la visibilidad */
 }
 
 .footer-info i {
@@ -163,12 +172,17 @@ body {
 /* Parte inferior del footer */
 .footer-bottom {
     text-align: center;
-    margin-top: 10px; /* Reduce el espacio superior */
-    padding-top: 5px; /* Reduce el padding superior */
+    margin-top: 10px;
+    /* Reduce el espacio superior */
+    padding-top: 5px;
+    /* Reduce el padding superior */
     border-top: 1px solid #030303;
-    font-size: 4px; /* Reduce el tamaño del texto */
-    color: #393083; /* Color más claro */
+    font-size: 4px;
+    /* Reduce el tamaño del texto */
+    color: #393083;
+    /* Color más claro */
 }
+
 .derechos {
     color: #393083;
 }
@@ -189,6 +203,7 @@ body {
     text-decoration: none;
     font-size: 30px;
 }
+
 .whatsapp-button:hover {
     background-color: #1ebe5d;
 }

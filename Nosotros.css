@@ -47,14 +47,15 @@ body {
 /* Navbar */
 .navbar {
     display: flex;
-    align-items: center;
     margin-right: 10px;
+    margin-bottom: 20px;
+    margin-top: 15px;
 }
 
 .navbar a {
     display: block;
-    padding: 10px 15px;
-    color: rgb(0, 0, 0);
+    padding: 10px 15px; /* Reducimos el padding */
+    color: rgb(17, 17, 17);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
@@ -63,8 +64,10 @@ body {
 .navbar a:hover {
     background: #E31E25;
     color: white;
-    border-radius: 16px;
-    transition: background 0.3s, color 0.3s;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
 }
 
 /* Imagen principal */
