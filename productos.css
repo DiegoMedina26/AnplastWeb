@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset general */
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +14,7 @@ body {
     font-family: sans-serif;
     padding-top: 100px;
     background-color: #ffffff;
+    margin: 0;
 }
 
 /* Barra de navegación */
@@ -29,7 +30,7 @@ body {
     left: 0;
     z-index: 100;
     padding: 0 20px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
     border-bottom: 3px solid #E31E25;
 }
 
@@ -69,17 +70,23 @@ body {
     border-bottom-left-radius: 16px;
 }
 
+/* Aseguramos que el logo esté alineado correctamente */
+.navbar .logo {
+    font-size: 24px; /* Tamaño adecuado para el logo */
+    font-weight: bold;
+    color: #393083;
+    text-transform: uppercase;
+}
+
 /* Sección de productos */
 .productos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* Ahora los productos aparecerán en filas de 3 */
     gap: 20px;
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
-
 
 .producto {
     background: #fff;
@@ -137,14 +144,12 @@ body {
     font-size: 20px;
     margin-bottom: 15px;
     color: #393083;
-    /* Color dorado para los títulos */
 }
 
 .footer-info p {
     font-size: 16px;
     margin: 8px 0;
     color: #000000;
-    /* Color más claro para mejorar la visibilidad */
 }
 
 .footer-info i {
@@ -173,14 +178,10 @@ body {
 .footer-bottom {
     text-align: center;
     margin-top: 10px;
-    /* Reduce el espacio superior */
     padding-top: 5px;
-    /* Reduce el padding superior */
     border-top: 1px solid #030303;
     font-size: 4px;
-    /* Reduce el tamaño del texto */
     color: #393083;
-    /* Color más claro */
 }
 
 .derechos {
@@ -206,4 +207,102 @@ body {
 
 .whatsapp-button:hover {
     background-color: #1ebe5d;
+}
+
+/* Estilos para vista móvil */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar {
+        flex-direction: column; /* Los elementos se apilan verticalmente */
+        align-items: center; /* Centrar los elementos */
+        justify-content: center; /* Centrado de los elementos */
+    }
+
+    .navbar a {
+        font-size: 16px;
+        padding: 8px 12px;
+        margin: 5px 0; /* Un poco de espacio entre los enlaces */
+    }
+
+    .navbar .logo {
+        font-size: 20px; /* Ajustamos el tamaño del logo para móviles */
+        margin-bottom: 10px;
+    }
+
+    /* Productos */
+    .productos {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas para pantallas medianas */
+    }
+
+    .producto h2 {
+        font-size: 16px;
+    }
+
+    .producto p {
+        font-size: 12px;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-info h3,
+    .footer-social h3 {
+        font-size: 18px;
+    }
+
+    .footer-info p {
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        font-size: 6px;
+    }
+
+    .whatsapp-button {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+    }
+}
+
+/* Estilos para vista móvil más pequeña */
+@media (max-width: 480px) {
+    /* Navbar */
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .navbar .logo {
+        font-size: 18px; /* Reducimos el tamaño del logo en pantallas muy pequeñas */
+    }
+
+    /* Productos */
+    .productos {
+        grid-template-columns: 1fr; /* Una sola columna para pantallas muy pequeñas */
+    }
+
+    .producto h2 {
+        font-size: 14px;
+    }
+
+    .producto p {
+        font-size: 12px;
+    }
+
+    /* Footer */
+    .footer-info h3,
+    .footer-social h3 {
+        font-size: 16px;
+    }
+
+    .footer-info p {
+        font-size: 12px;
+    }
+
+    .footer-bottom {
+        font-size: 4px;
+    }
 }
